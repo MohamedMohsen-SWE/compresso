@@ -251,7 +251,7 @@ while ((byte=fgetc(file))!=EOF) {
             }
 
             // check if current bitstring matches a code
-            for (int j = 0; j < 256&&pos>2; j++) {
+            for (int j = 0; j < 256; j++) {
                 if (decodes[j][0] != '\0' &&strcmp(decodes[j], decoded) == 0) {
                     
                     fputc((char)j, out);  
