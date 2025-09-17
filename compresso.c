@@ -352,8 +352,7 @@ printf("the original size -> %.ld bytes",originalSize);
 printf("\nthe compressed size -> %ld bytes",compressedSize);
 float ratio = ((float)compressedSize / (float)originalSize) * 100.0;
 printf("\nthe ration of compression  -> %.2f of the original size\n",ratio);
-printf("============================================================================");
-
+printf("\n======================compression is done==================== \n");
 
 
 }
@@ -361,7 +360,7 @@ printf("========================================================================
 
 void decompressedOption(char *inputFileName,char*outputFileName){
 
-printf("please wait ,loading..... ");
+
   FILE *input=fopen(inputFileName,"rb");
   if(input==NULL){
        perror("cant open file\n");
@@ -381,6 +380,8 @@ decompress(input,output);
 
 fclose(input);
 fclose(output);
+
+printf("\n======================decompression is done==================== \n");
   
 }
 
@@ -403,10 +404,11 @@ void main(int argc , char* argv[argc]){
     }
 
     if (compressFlag) {
-      
+      printf("please wait ,loading..... \n");
        compressOption(inputFile,outputFile);
 
     } else if (decompressFlag) {
+      printf("please wait ,loading..... \n");
         decompressedOption(inputFile,outputFile);
     } else {
         printf("Usage: %s -c|-d <inputFile> -o <outputFile>\n", argv[0]);
