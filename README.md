@@ -1,12 +1,11 @@
 # Compresso
 
-**Compresso** is a lightweight and safe **Huffman coding CLI tool** for compressing and decompressing text files.  
+**Compresso** is a lightweight  **Huffman coding CLI tool** for compressing and decompressing text files.  
 
 ## 🚀 Features
 - Compress any text file into a `.huff` binary file  
 - Decompress `.huff` files back to their original form  
-- Displays compression ratio (original size vs compressed size)  
-- Safe error handling (no silent overwrites, clear error messages)  
+- Displays compression ratio (original size vs compressed size)    
 - Cross-platform (Linux, macOS, Windows with GCC/MinGW)  
 
 ---
