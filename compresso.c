@@ -227,12 +227,12 @@ void decompress(FILE * file,FILE * out){
     }
   
 // for(unsigned int i=0;i<265;i++){
-//   if(i=='\n'){
+  
 //     printf("%c -> %s\n",i,decodes[i]);
-//   }
+  
 
 
-// }
+//  }
 unsigned int byte;
     char decoded[2048];
     decoded[0] = '\0';
@@ -253,7 +253,7 @@ while ((byte=fgetc(file))!=EOF) {
             // check if current bitstring matches a code
             for (int j = 0; j < 256; j++) {
                 if (decodes[j][0] != '\0' &&strcmp(decodes[j], decoded) == 0) {
-                    
+                  
                     fputc((char)j, out);  
                   
                     decoded[0] = '\0';  
@@ -404,11 +404,11 @@ void main(int argc , char* argv[argc]){
     }
 
     if (compressFlag) {
-      printf("please wait ,loading..... \n");
+      printf("please wait ,loading..... ");
        compressOption(inputFile,outputFile);
 
     } else if (decompressFlag) {
-      printf("please wait ,loading..... \n");
+      printf("\nplease wait ,loading..... \n");
         decompressedOption(inputFile,outputFile);
     } else {
         printf("Usage: %s -c|-d <inputFile> -o <outputFile>\n", argv[0]);
