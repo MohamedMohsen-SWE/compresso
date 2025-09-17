@@ -1,0 +1,2 @@
+compresso:compresso.c
+	gcc compresso.c -o compresso
